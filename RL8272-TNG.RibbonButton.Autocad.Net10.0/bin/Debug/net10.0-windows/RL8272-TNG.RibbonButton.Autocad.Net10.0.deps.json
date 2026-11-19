@@ -1,0 +1,129 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "RL8272-TNG.RibbonButton.Autocad.Net10.0/1.0.0": {
+        "dependencies": {
+          "TYPSA.SharedLibAutocad": "1.0.0",
+          "TYPSA.SharedLibExcelAutocad": "1.0.0",
+          "TYPSA.SharedLibMetrics": "1.0.0"
+        },
+        "runtime": {
+          "RL8272-TNG.RibbonButton.Autocad.Net10.0.dll": {}
+        }
+      },
+      "TYPSA.SharedLibAutocad/1.0.0": {
+        "dependencies": {
+          "TYPSA.SharedLibEndPoints": "1.0.0",
+          "TYPSA.SharedLibForms": "1.0.0"
+        },
+        "runtime": {
+          "TYPSA.SharedLibAutocad.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "TYPSA.SharedLibEndPoints/1.0.0": {
+        "dependencies": {
+          "TYPSA.SharedLibForms": "1.0.0"
+        },
+        "runtime": {
+          "TYPSA.SharedLibEndPoints.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "TYPSA.SharedLibExcelAutocad/1.0.0": {
+        "dependencies": {
+          "TYPSA.SharedLibForms": "1.0.0"
+        },
+        "runtime": {
+          "TYPSA.SharedLibExcelAutocad.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "TYPSA.SharedLibForms/1.0.0": {
+        "runtime": {
+          "TYPSA.SharedLibForms.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "TYPSA.SharedLibMetrics/1.0.0": {
+        "runtime": {
+          "TYPSA.SharedLibMetrics.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "EPPlus/4.5.3.3": {
+        "runtime": {
+          "EPPlus.dll": {
+            "assemblyVersion": "4.5.3.3",
+            "fileVersion": "4.5.3.3"
+          }
+        }
+      },
+      "TYPSA.SharedLibJson/1.0.0.0": {
+        "runtime": {
+          "TYPSA.SharedLibJson.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RL8272-TNG.RibbonButton.Autocad.Net10.0/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TYPSA.SharedLibAutocad/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TYPSA.SharedLibEndPoints/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TYPSA.SharedLibExcelAutocad/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TYPSA.SharedLibForms/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TYPSA.SharedLibMetrics/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EPPlus/4.5.3.3": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TYPSA.SharedLibJson/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

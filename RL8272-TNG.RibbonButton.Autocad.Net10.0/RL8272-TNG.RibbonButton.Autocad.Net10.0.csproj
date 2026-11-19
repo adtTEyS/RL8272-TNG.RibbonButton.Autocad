@@ -1,0 +1,149 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<!-- ============================================= -->
+	<!-- CONFIGURACIÓN GENERAL -->
+	<!-- ============================================= -->
+
+	<PropertyGroup>
+
+		<TargetFramework>net10.0-windows</TargetFramework>
+		<OutputType>Library</OutputType>
+
+		<PlatformTarget>x64</PlatformTarget>
+		<Platforms>x64</Platforms>
+
+		<UseWindowsForms>true</UseWindowsForms>
+		<UseWPF>true</UseWPF>
+
+		<RootNamespace>RL8272_TNG.RibbonButton.Autocad</RootNamespace>
+		<AssemblyName>RL8272-TNG.RibbonButton.Autocad.Net10.0</AssemblyName>
+
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+
+		<EnableDefaultCompileItems>true</EnableDefaultCompileItems>
+		<EnableDefaultEmbeddedResourceItems>true</EnableDefaultEmbeddedResourceItems>
+
+		<Deterministic>true</Deterministic>
+
+		<Configurations>Debug;Release</Configurations>
+
+	</PropertyGroup>
+
+	<!-- ============================================= -->
+	<!-- CONFIGURACIÓN DEBUG -->
+	<!-- ============================================= -->
+
+	<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>portable</DebugType>
+
+		<Optimize>false</Optimize>
+
+		<DefineConstants>DEBUG;TRACE</DefineConstants>
+
+		<OutputPath>bin\Debug\</OutputPath>
+
+		<WarningLevel>4</WarningLevel>
+
+	</PropertyGroup>
+
+	<!-- ============================================= -->
+	<!-- CONFIGURACIÓN RELEASE -->
+	<!-- ============================================= -->
+
+	<PropertyGroup Condition="'$(Configuration)' == 'Release'">
+
+		<DebugType>portable</DebugType>
+
+		<Optimize>true</Optimize>
+
+		<DefineConstants>TRACE</DefineConstants>
+
+		<OutputPath>bin\Release\</OutputPath>
+
+		<WarningLevel>4</WarningLevel>
+
+	</PropertyGroup>
+
+	<!-- ============================================= -->
+	<!-- RUTAS AUTODESK 2026 -->
+	<!-- ============================================= -->
+
+	<PropertyGroup>
+
+		<AutoCADPath>C:\Program Files\Autodesk\AutoCAD 2026</AutoCADPath>
+
+	</PropertyGroup>
+
+	<!-- ============================================= -->
+	<!-- REFERENCIAS AUTOCAD 2026 -->
+	<!-- ============================================= -->
+
+	<ItemGroup>
+
+		<Reference Include="accoremgd">
+			<HintPath>$(AutoCADPath)\accoremgd.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+
+		<Reference Include="acdbmgd">
+			<HintPath>$(AutoCADPath)\acdbmgd.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+
+		<Reference Include="acdbmgdbrep">
+			<HintPath>$(AutoCADPath)\acdbmgdbrep.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+
+		<Reference Include="acmgd">
+			<HintPath>$(AutoCADPath)\acmgd.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+
+		<Reference Include="AdWindows">
+			<HintPath>$(AutoCADPath)\AdWindows.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+
+	</ItemGroup>
+
+	<!-- ============================================= -->
+	<!-- RECURSOS -->
+	<!-- ============================================= -->
+
+	<!-- ============================================= -->
+	<!-- ARCHIVOS EXTERNOS DE RECURSOS -->
+	<!-- ============================================= -->
+
+	<ItemGroup>
+
+		<None Update="00-Resources\AteneaModelCheckerCivil.png" Condition="Exists('00-Resources\AteneaModelCheckerCivil.png')" />
+
+		<None Update="00-Resources\typsaIcon.ico" Condition="Exists('00-Resources\typsaIcon.ico')" />
+
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\XX0000-TYPSA.SharedLib\0000-TYPSA.SharedLibAutocad\TYPSA.SharedLibAutocad\TYPSA.SharedLibAutocad.csproj" />
+	  <ProjectReference Include="..\..\XX0000-TYPSA.SharedLib\0000-TYPSA.SharedLibExcelAutocad\TYPSA.SharedLibExcelAutocad\TYPSA.SharedLibExcelAutocad.csproj" />
+	  <ProjectReference Include="..\..\XX0000-TYPSA.SharedLib\0000-TYPSA.SharedLibMetrics\TYPSA.SharedLibMetrics\TYPSA.SharedLibMetrics.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Properties\Resources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Resources.resx</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Update="Properties\Resources.resx">
+	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+	    <Generator>ResXFileCodeGenerator</Generator>
+	  </EmbeddedResource>
+	</ItemGroup>
+
+</Project>
